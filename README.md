@@ -15,6 +15,6 @@ Using my beginning understanding of Python to try and build TicTacToe/Noughts an
 
 To start the game:
 
-- Clone or fork the repo and make sure to install Python 3[https://www.freecodecamp.org/news/python-version-on-mac-update/]
+- Clone or fork the repo and make sure to install [Python 3](https://www.freecodecamp.org/news/python-version-on-mac-update/)
 - In terminal, change to the folder using `cd PythonToe`
 - run the file by typing in `python3 PythonToe.py`
