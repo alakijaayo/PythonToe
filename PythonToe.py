@@ -23,5 +23,17 @@ def start():
   while True:
     player_1_move()
     i += 1
+    if player.board.game == True:
+      print("Player 1 Wins!")
+      break
+    if i == 9:
+      print("It's a Draw")
+      break
+    player_2_move()
+    i += 1
+    if player.board.game == True:
+      print("Player 2 Wins!")
+      break
+
 
 start();
