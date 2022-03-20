@@ -1,10 +1,9 @@
-from Game import myboard
+from Game.board import Board
 
 class Player:
 
-  def __init__(self, name, output, input):
+  def __init__(self, name = ""):
     self.name = name
-    self.output = output
-    self.input = input
+
 
     
