@@ -3,6 +3,7 @@ class Board:
 
   def __init__(self):
     self.game = False
+    self.options = ["TL", "TC", "TR", "ML", "MC", "MR", "BL", "BC", "BR"]
     self.choices = {
       "TL": " ",
       "TC": " ",
@@ -25,13 +26,20 @@ class Board:
     self.winner()
 
   def userChoice(self, answer, user):
-    if self.choices[answer] == " ":
-      self.choices[answer] = user
-      self.print_board()
-    elif self.choices[answer] != " ":
-      print("This position is already taken. Try again:")
+    position = answer.upper()
+    if position in self.options:
+      if self.choices[position] == " ":
+        self.choices[position] = user
+        self.print_board()
+      elif self.choices[position] != " ":
+        print("This position is already taken. Try again:")
+        answer = input()
+        self.userChoice(answer, user)
+    else:
+      print("Looks like that isn't a space on the board. Try again:")
       answer = input()
       self.userChoice(answer, user)
+      
 
   def winner(self):
     win = [

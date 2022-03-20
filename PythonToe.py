@@ -24,7 +24,7 @@ def start():
     player_1_move()
     i += 1
     if player.board.game == True:
-      print("Player 1 Wins!")
+      print(player.name1.capitalize() + " Wins!")
       break
     if i == 9:
       print("It's a Draw")
@@ -32,8 +32,7 @@ def start():
     player_2_move()
     i += 1
     if player.board.game == True:
-      print("Player 2 Wins!")
+      print(player.name2.capitalize()  + " Wins!")
       break
-
 
 start();
