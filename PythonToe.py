@@ -8,7 +8,7 @@ def player_1_move():
   player.move_X(answer=answer)
 
 def player_2_move():
-  print("Player 2, choose your position:")
+  print("Player 2, choose your position:") # perhaps listing which symbol belongs to each player
   answer = input()
   player.move_O(answer=answer)
 
@@ -20,7 +20,7 @@ def start():
   player.player1_name()
   player.player2_name()
   i = 0
-  while True:
+  while True: # why not use the player.board.game boolean?
     player_1_move()
     i += 1
     if player.board.game == True:
@@ -29,10 +29,14 @@ def start():
     if i == 9:
       print("It's a Draw")
       break
-    player_2_move()
+    player_2_move() # repetition
     i += 1
     if player.board.game == True:
       print(player.name2.capitalize()  + " Wins!")
       break
 
-start();
+if __name__ == '__main__': # include guard 
+  try:
+    start()
+  except KeyboardInterrupt: # If the player quits
+    print('\nThanks for playing')
